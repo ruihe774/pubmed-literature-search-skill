@@ -1,6 +1,6 @@
 # pubmed-literature-search
 
-A targeted (not "deep research") skill for literature research in PubMed that avoids "weak" papers. It answers biomedical questions from a handful of papers that were actually found, read and weighed, instead of repeating an abstract's headline.
+A skill for targeted (not "deep research") literature research in PubMed to avoid "weak" papers. It answers biomedical questions from a handful of papers that were actually found, read and weighed, instead of repeating an abstract's headline.
 
 > **Requires the PubMed connector.** The skill calls the PubMed tools (`search_articles`, `get_article_metadata`, `get_full_text_article`, and others). Without the connector it has nothing to search with. This plugin does not bundle or install it; enable it yourself (see [Requirements](#requirements)).
 
