@@ -22,6 +22,19 @@ It does not run a broad multi-source deep-research pipeline; it is meant for foc
 - **The PubMed connector**, connected and enabled for your account (Claude.ai connectors, or the PubMed MCP server in your setup). The skill uses its `mcp__PubMed__*` tools.
 - Optional: the bioRxiv connector for very recent preprints. The skill labels preprints as unreviewed and never relies on one alone.
 
+## Data disclosure
+
+This plugin contains no code and makes no network requests itself. It is instructions (a skill) that tell Claude how to use the PubMed connector and, optionally, the bioRxiv connector. **If the agent follows the skill's instructions, data from your conversation may be sent to PubMed or bioRxiv:**
+
+- **PubMed (NCBI / U.S. National Library of Medicine).** The agent derives search queries, PMIDs, DOIs and citation strings from your question and sends them to PubMed through the connector's tools (`search_articles`, `get_article_metadata`, `get_full_text_article`, and others). Those terms may reflect what you asked, including any health, medical or personal details you put in your question.
+- **bioRxiv / medRxiv (Cold Spring Harbor Laboratory).** If the optional bioRxiv connector is enabled, the agent may send search parameters (date ranges, subject categories, DOIs) to bioRxiv to look for recent preprints.
+
+Requests go through the connector you have enabled, so the connector provider's own terms and privacy policy also apply, as do those of PubMed and bioRxiv. The plugin author does not receive, collect or store any of this data. Do not include information in your questions that you are not comfortable sending to these services. Disable the connectors to prevent any such transmission.
+
+## Intended audience
+
+The skill is a research aid for adults and is not designed for or directed at children under 18. PubMed and bioRxiv index scientific and medical literature, which can include mature material such as clinical, sexual-health, reproductive, substance-use and mental-health content, graphic descriptions or images, and discussion of abuse or self-harm. These sources do not age-restrict their content, and the skill does not filter it.
+
 ## Installation
 
 ```
