@@ -4,7 +4,7 @@
     "name": "Rui He"
   },
   "description": "A skill for targeted (not \"deep research\") literature research in PubMed to avoid \"weak\" papers. Requires the PubMed connector",
-  "displayName": "pubmed-literature-search",
+  "displayName": "Dehallucinated PubMed literature search",
   "homepage": "https://github.com/ruihe774/pubmed-literature-search-skill",
   "keywords": [
     "pubmed",
