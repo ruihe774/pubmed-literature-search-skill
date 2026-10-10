@@ -1,0 +1,22 @@
+{
+  "author": {
+    "email": "ruihe774@outlook.com",
+    "name": "Rui He"
+  },
+  "description": "A targeted (not \"deep research\") skill for literature research in PubMed that reads full text and weighs evidence to avoid \"weak\" papers. Requires the PubMed connector",
+  "displayName": "pubmed-literature-search",
+  "homepage": "https://github.com/ruihe774/pubmed-literature-search-skill",
+  "keywords": [
+    "pubmed",
+    "literature-search",
+    "biomedical",
+    "life-science",
+    "evidence",
+    "research",
+    "skill"
+  ],
+  "license": "Unlicense",
+  "name": "pubmed-literature-search",
+  "repository": "https://github.com/ruihe774/pubmed-literature-search-skill",
+  "version": "0.1.0"
+}

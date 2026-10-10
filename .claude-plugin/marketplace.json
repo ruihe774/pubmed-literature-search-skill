@@ -1,0 +1,12 @@
+{
+  "name": "pubmed-literature-search-skill",
+  "description": "A targeted PubMed literature research skill",
+  "owner": { "name": "Rui He", "email": "ruihe774@outlook.com" },
+  "plugins": [
+    {
+      "name": "pubmed-literature-search",
+      "source": "./",
+      "description": "A targeted (not \"deep research\") skill for literature research in PubMed that avoids \"weak\" papers. Requires the PubMed connector"
+    }
+  ]
+}
