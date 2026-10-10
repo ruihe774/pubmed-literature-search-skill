@@ -23,6 +23,8 @@ If unsure whether something counts as common knowledge, search — a quick searc
 The PubMed tools may be deferred; load them with ToolSearch before first use:
 `select:mcp__PubMed__search_articles,mcp__PubMed__get_article_metadata,mcp__PubMed__convert_article_ids,mcp__PubMed__get_full_text_article,mcp__PubMed__find_related_articles,mcp__PubMed__lookup_article_by_citation`
 
+If the PubMed tools are not available (ToolSearch finds nothing, or the connector is not connected), do not fall back to answering from memory or general web search. First, if you have a connector directory search tool (available in Claude web and desktop), search it for the PubMed connector and offer it to the user to add. Otherwise, ask the user to add or enable the PubMed connector/MCP server, and wait for them before continuing.
+
 | Tool | Use it to |
 |---|---|
 | `search_articles` | Find articles. PubMed syntax: `[Title]`, `[Author]`, `[Journal]`, `[MeSH Terms]`, `[Publication Type]`, AND/OR/NOT, `date_from`/`date_to`, `sort`. No wildcards, no empty query. |
