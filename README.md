@@ -2,7 +2,7 @@
 
 A skill for targeted (not "deep research") literature research in PubMed to avoid "weak" papers. It answers biomedical questions from a handful of papers that were actually found, read and weighed, instead of repeating an abstract's headline.
 
-> **Requires the PubMed connector.** The skill calls the PubMed tools (`search_articles`, `get_article_metadata`, `get_full_text_article`, and others). Without the connector it has nothing to search with. This plugin does not bundle or install it; enable it yourself (see [Requirements](#requirements)).
+> **No connectors needed.** This version talks to NCBI E-utilities (and optionally the bioRxiv API) directly with `curl`. It only needs a shell with network access, `curl` and `jq`.
 
 ## What it does
 
@@ -18,18 +18,18 @@ It does not run a broad multi-source deep-research pipeline; it is meant for foc
 
 ## Requirements
 
-- Claude Code with plugin support.
-- **The PubMed connector**, connected and enabled for your account (Claude.ai connectors, or the PubMed MCP server in your setup). The skill uses its `mcp__PubMed__*` tools.
-- Optional: the bioRxiv connector for very recent preprints. The skill labels preprints as unreviewed and never relies on one alone.
+- Claude Code (or any agent) with plugin/skill support and a Bash tool.
+- `curl` and `jq` on the machine (`xmllint` optional), with outbound HTTPS to `eutils.ncbi.nlm.nih.gov`, `www.ncbi.nlm.nih.gov`, `pmc.ncbi.nlm.nih.gov` and, for preprints, `api.biorxiv.org`.
+- No API key required (NCBI allows ~3 requests/second without one).
 
 ## Data disclosure
 
-This plugin contains no code and makes no network requests itself. It is instructions (a skill) that tell Claude how to use the PubMed connector and, optionally, the bioRxiv connector. **If the agent follows the skill's instructions, data from your conversation may be sent to PubMed or bioRxiv:**
+This plugin contains no code of its own; it is instructions (a skill) that tell Claude which public endpoints to call with `curl`. **If the agent follows the skill's instructions, data from your conversation may be sent to NCBI and bioRxiv:**
 
-- **PubMed (NCBI / U.S. National Library of Medicine).** The agent derives search queries, PMIDs, DOIs and citation strings from your question and sends them to PubMed through the connector's tools (`search_articles`, `get_article_metadata`, `get_full_text_article`, and others). Those terms may reflect what you asked, including any health, medical or personal details you put in your question.
-- **bioRxiv / medRxiv (Cold Spring Harbor Laboratory).** If the optional bioRxiv connector is enabled, the agent may send search parameters (date ranges, subject categories, DOIs) to bioRxiv to look for recent preprints.
+- **PubMed / PMC (NCBI, U.S. National Library of Medicine).** Search queries, PMIDs, PMCIDs, DOIs and citation strings derived from your question are sent in request URLs. These may reflect what you asked, including any health or personal details you include.
+- **bioRxiv / medRxiv (Cold Spring Harbor Laboratory).** Date ranges, categories and DOIs may be sent when looking for preprints.
 
-Requests go through the connector you have enabled, so the connector provider's own terms and privacy policy also apply, as do those of PubMed and bioRxiv. The plugin author does not receive, collect or store any of this data. Do not include information in your questions that you are not comfortable sending to these services. Disable the connectors to prevent any such transmission.
+The skill tells the agent not to include your name or email in requests. The plugin author does not receive, collect or store any of this data; the services' own terms and privacy policies apply. Do not include information in your questions that you are not comfortable sending to them.
 
 ## Intended audience
 

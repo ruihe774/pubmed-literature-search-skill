@@ -6,7 +6,7 @@
     {
       "name": "pubmed-literature-search",
       "source": "./",
-      "description": "A skill for targeted (not \"deep research\") literature research in PubMed to avoid \"weak\" papers. Requires the PubMed connector"
+      "description": "A skill for targeted (not \"deep research\") literature research in PubMed to avoid \"weak\" papers. Uses curl against NCBI E-utilities; no connector required"
     }
   ]
 }
