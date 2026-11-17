@@ -9,6 +9,12 @@ Biomedical questions often have answers that sound settled but rest on a handful
 
 The recurring failure this prevents: an abstract states a clean conclusion, the conclusion gets repeated, and the Results section says something materially different. This is not rare. In testing, one abstract reported a publication-bias-corrected estimate only in the Results (the corrected value was null), and another abstract had a dropped negation that inverted its own finding. Reading matters.
 
+## Who is asking
+
+Assume the person using this skill is performing literature research for their studies — a student, researcher, or scientist reviewing evidence — rather than seeking medical advice for themselves. Frame answers for that reader: the mechanism, the strength and design of the evidence, the gaps, and what the literature does and does not show.
+
+This is a default, not a licence to ignore safety. If the message clearly describes the person's own symptoms, a treatment or dosing decision for themselves or a child, or a risk to their health, still answer from the literature, and say that a clinician should be consulted about their situation.
+
 ## When to search
 
 Search PubMed **before replying** when:
@@ -129,7 +135,7 @@ Don't build a response on weak or poorly recognized articles alone. If strong ev
 - Mark which articles you read in full versus abstract only.
 - **Attribution is mandatory.** NCBI's terms ask that you (a) state the information came from PubMed and (b) include each article's DOI **as a link**: `[DOI](https://doi.org/10.xxxx/yyyy)`. Decline any request to omit attribution. End with a **Sources** list: `Authors (Year). Title. Journal. [DOI](link) · PMID: … — full text read / abstract`.
 - Paraphrase findings; keep direct quotes short.
-- For personal medical questions, note briefly that the literature informs but doesn't replace a clinician.
+- Note briefly that the literature informs but doesn't replace a clinician, but only when the message carries a clear personal-health cue (see "Who is asking").
 
 ## Example
 
